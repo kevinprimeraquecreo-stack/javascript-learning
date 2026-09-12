@@ -1,0 +1,9 @@
+pokemon: La caja principal que te dio la API.
+
+.sprites: La carpeta de imágenes dentro de pokemon.
+
+.other: La carpeta de ilustraciones especiales dentro de sprites.
+
+["official-artwork"]: La carpeta de arte oficial dentro de other. (Usamos corchetes [] con comillas en lugar de punto porque el nombre tiene un guion - y el punto causaría error de sintaxis).
+
+.front_default: El enlace de la imagen frontal guardado allí dentro.

@@ -1,0 +1,55 @@
+    <!DOCTYPE html>
+        <html lang="es">
+        <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+
+        <main class="pokedex-container">
+        <h1>Pokédex</h1>
+
+        <!-- Formulario-->
+        <form id="search-form">
+            <input 
+            type="text" 
+            id="pokemon-input" 
+            placeholder="Nombre o ID del Pokémon" 
+            autocomplete="off"
+            required
+            >
+            <button type="submit">Buscar</button>
+        </form>
+
+        <!-- Estado de carga o error -->
+        <p id="status-message" class="status-message"></p>
+
+        <!-- Tarjeta del Pokémon-->
+        <article id="pokemon-card" class="card hidden">
+            <div class="card-header">
+            <h2 id="pokemon-name"></h2>
+            <span id="pokemon-id"></span>
+            </div>
+
+            <img id="pokemon-img" src="" alt="Imagen del Pokémon">
+
+            <div id="pokemon-types" class="types-container"></div>
+
+            <div id="pokemon-stats" class="stats-container"></div>
+
+        <div class="navigation-buttons">
+            <button id="btn-prev">← Anterior</button>
+            <button id="btn-next">Siguiente →</button>
+        </div>
+        </article>
+        <section id="history-container">
+            <h3>Búsquedas recientes</h3>
+            <div id="historylist"></div>
+        </section>
+        </main>
+
+        <script src="script.js"></script>
+        </body>
+        </html>

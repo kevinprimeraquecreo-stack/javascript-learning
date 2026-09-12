@@ -1,14 +1,14 @@
-const escribir = document.querySelector("#todo-input");
-const agregar = document.querySelector("#btn");
-const form = document.querySelector("#todo-form");
-const lista = document.querySelector("#todo-list");
-const all = document.querySelector('[data-filter="all"]');
-const pending = document.querySelector('[data-filter="pending"]');
-const completed = document.querySelector('[data-filter=completed]')
+    const escribir = document.querySelector("#todo-input");
+    const agregar = document.querySelector("#btn");
+    const form = document.querySelector("#todo-form");
+    const lista = document.querySelector("#todo-list");
+    const all = document.querySelector('[data-filter="all"]');
+    const pending = document.querySelector('[data-filter="pending"]');
+    const completed = document.querySelector('[data-filter=completed]')
 
-let filtro = "todas"
+    let filtro = "todas"
 
-let tareas = JSON.parse(localStorage.getItem("misTareas")) || [];
+    let tareas = JSON.parse(localStorage.getItem("misTareas")) || [];
 
 
 function noduplicar (){
@@ -28,8 +28,7 @@ function noduplicar (){
     else if(filtro === "completadas"){
         tareasFiltradas = tareas.filter((c) => c.completada === true)
     }
- 
-   
+
     tareasFiltradas.forEach((tarea) => {
     const li = document.createElement("li");
     li.textContent = tarea.texto;
@@ -38,7 +37,7 @@ function noduplicar (){
             li.style.textDecoration = "line-through";
         };
 
-      const btn2 = document.createElement("button")
+    const btn2 = document.createElement("button")
         btn2.textContent = "X";
 
         // evento 1 /S/
@@ -54,8 +53,8 @@ function noduplicar (){
         noduplicar();
     })
 
-      lista.appendChild(li);
-     li.appendChild(btn2);
+    lista.appendChild(li);
+    li.appendChild(btn2);
 
     });
 
